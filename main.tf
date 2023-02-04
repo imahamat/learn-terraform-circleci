@@ -14,7 +14,7 @@ resource "aws_s3_bucket" "app" {
   tags = {
     Name          = "App Bucket"
     public_bucket = true
-  }
+  } 
 
   bucket        = "${var.app}.${var.label}.${random_uuid.randomid.result}"
   force_destroy = true
